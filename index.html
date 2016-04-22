@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <style>
+body {
+  background: url("https://headout-s3.imgix.net/cities/san-francisco/images/mobile/morning.jpg?blur=100&bri=-25");
+  background-size: cover;
+}
+
+table {
+  margin: 16px 0px;
+}
+
+.centered {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.centered .small {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.password {
+  font-family: monospace;
+}
+
+td {
+  vertical-align: baseline;
+  padding: 2px;
+}
+
+.left-pad {
+  padding-left: 16px;
+}
+
+.fa-wifi {
+  margin-bottom: 48px;
+  font-size: 64px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+svg {
+  width: 72px;
+  margin: 32px auto;
+  display: block;
+}
+
+@-webkit-keyframes pop {
+  0% {
+    -moz-transform: translateY(0em);
+    -ms-transform: translateY(0em);
+    -webkit-transform: translateY(0em);
+    transform: translateY(0em);
+  }
+  100% {
+    -moz-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+@-moz-keyframes pop {
+  0% {
+    -moz-transform: translateY(0em);
+    -ms-transform: translateY(0em);
+    -webkit-transform: translateY(0em);
+    transform: translateY(0em);
+  }
+  100% {
+    -moz-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+@-ms-keyframes pop {
+  0% {
+    -moz-transform: translateY(0em);
+    -ms-transform: translateY(0em);
+    -webkit-transform: translateY(0em);
+    transform: translateY(0em);
+  }
+  100% {
+    -moz-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+@keyframes pop {
+  0% {
+    -moz-transform: translateY(0em);
+    -ms-transform: translateY(0em);
+    -webkit-transform: translateY(0em);
+    transform: translateY(0em);
+  }
+  100% {
+    -moz-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-moz-keyframes move {
+  0% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-ms-keyframes move {
+  0% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@keyframes move {
+  0% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+svg {
+  width: 72px;
+  -webkit-animation: move 20s ease-in-out infinite;
+  animation: move 20s ease-in-out infinite;
+}
+
+.bubble {
+  opacity: 0;
+  -webkit-animation: fade-in 1s forwards, pop 3s ease infinite alternate;
+  animation: fade-in 1s forwards, pop 3s ease infinite alternate;
+}
+
+.bubble:nth-child(0) {
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(1) {
+  -moz-animation-delay: 0.1s;
+  -o-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.bubble:nth-child(2) {
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.bubble:nth-child(3) {
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.bubble:nth-child(4) {
+  -moz-animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.bubble:nth-child(5) {
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.bubble:nth-child(6) {
+  -moz-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.bubble:nth-child(7) {
+  -moz-animation-delay: 0.7s;
+  -o-animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.bubble:nth-child(8) {
+  -moz-animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.bubble:nth-child(9) {
+  -moz-animation-delay: 0.9s;
+  -o-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+.bubble:nth-child(10) {
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(11) {
+  -moz-animation-delay: 1.1s;
+  -o-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+.bubble:nth-child(12) {
+  -moz-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.bubble:nth-child(13) {
+  -moz-animation-delay: 1.3s;
+  -o-animation-delay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.bubble:nth-child(14) {
+  -moz-animation-delay: 1.4s;
+  -o-animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.bubble:nth-child(15) {
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.bubble:nth-child(16) {
+  -moz-animation-delay: 1.6s;
+  -o-animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.bubble:nth-child(17) {
+  -moz-animation-delay: 1.7s;
+  -o-animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+.bubble:nth-child(18) {
+  -moz-animation-delay: 1.8s;
+  -o-animation-delay: 1.8s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+.bubble:nth-child(19) {
+  -moz-animation-delay: 1.9s;
+  -o-animation-delay: 1.9s;
+  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s;
+}
+
+.bubble:nth-child(20) {
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(21) {
+  -moz-animation-delay: 2.1s;
+  -o-animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+.bubble:nth-child(22) {
+  -moz-animation-delay: 2.2s;
+  -o-animation-delay: 2.2s;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+
+.bubble:nth-child(23) {
+  -moz-animation-delay: 2.3s;
+  -o-animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+
+.bubble:nth-child(24) {
+  -moz-animation-delay: 2.4s;
+  -o-animation-delay: 2.4s;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+
+.bubble:nth-child(25) {
+  -moz-animation-delay: 2.5s;
+  -o-animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.bubble:nth-child(26) {
+  -moz-animation-delay: 2.6s;
+  -o-animation-delay: 2.6s;
+  -webkit-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+}
+
+.bubble:nth-child(27) {
+  -moz-animation-delay: 2.7s;
+  -o-animation-delay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.bubble:nth-child(28) {
+  -moz-animation-delay: 2.8s;
+  -o-animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+.bubble:nth-child(29) {
+  -moz-animation-delay: 2.9s;
+  -o-animation-delay: 2.9s;
+  -webkit-animation-delay: 2.9s;
+  animation-delay: 2.9s;
+}
+
+.bubble:nth-child(30) {
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(31) {
+  -moz-animation-delay: 3.1s;
+  -o-animation-delay: 3.1s;
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s;
+}
+
+.bubble:nth-child(32) {
+  -moz-animation-delay: 3.2s;
+  -o-animation-delay: 3.2s;
+  -webkit-animation-delay: 3.2s;
+  animation-delay: 3.2s;
+}
+
+.bubble:nth-child(33) {
+  -moz-animation-delay: 3.3s;
+  -o-animation-delay: 3.3s;
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s;
+}
+
+.bubble:nth-child(34) {
+  -moz-animation-delay: 3.4s;
+  -o-animation-delay: 3.4s;
+  -webkit-animation-delay: 3.4s;
+  animation-delay: 3.4s;
+}
+
+.bubble:nth-child(35) {
+  -moz-animation-delay: 3.5s;
+  -o-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+h1 {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  color: #1e1e1e;
+  bottom: 6rem;
+  left: 1rem;
+  letter-spacing: -.06em;
+  font-size: 4rem;
+}
+
+.header {
+  position: relative;
+}
+        </style>
+    </head>
+    <body>
+<div class="full">
+  <div class="centered">
+    <p class="fa fa-lg fa-wifi"></p>
+
+    <table>
+      <tr>
+        <td class="small">SSID</td>
+      </tr>
+      <tr>
+        <td>Headout-Atithi</td>
+        <td class="small left-pad">2.5GHz</td>
+      </tr>
+      <tr>
+        <td>Headout-Atithi<span class="small">++</span></td>
+        <td class="small left-pad">5GHz</td>
+      </tr>
+    </table>
+
+    <span class="small">PASSWORD</span>
+    <br>
+    <span class="password">LetsHeadout123</span>
+    <svg width="150px" height="80px" viewBox="0 0 150 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <path class="bubble" fill="#fff" d="M98.0873229,7.10542736e-15 C89.4859229,0.0603 79.0303229,1.3925 66.6233229,5.1375 C51.6673229,9.6523 40.6343229,13.9615 31.8413229,18.3165 C31.5406729,17.47692 31.1959929,16.6029 30.5649229,15.6041 C29.8782629,14.518 29.2451229,13.5105 28.7779229,12.7641 C28.5443429,12.39106 28.3411329,12.05925 28.2035829,11.83904 C28.0792029,11.63996 28.0236929,11.55549 27.9801629,11.48813 C27.9801229,11.48803 27.9580629,11.46803 27.9479629,11.45793 C27.9137629,11.41773 27.8524629,11.33022 27.8524629,11.33022 C27.8521029,11.32992 27.7528629,11.27992 27.7248629,11.26992 C27.6685629,11.23972 27.6584629,11.21962 27.6293629,11.20962 C27.5710629,11.18952 27.5273029,11.17942 27.5017629,11.17942 C27.4504629,11.17242 27.4082629,11.18042 27.3741629,11.17942 C27.3067629,11.17742 27.2406429,11.17742 27.1508429,11.17942 C26.9711629,11.18342 26.7314429,11.19952 26.4169329,11.20962 C25.7878929,11.23982 24.9014329,11.29002 23.8002329,11.3695 C21.5980329,11.52536 18.5589329,11.75863 15.2482329,12.03917 L7.81293293,12.67765 C4.35853293,12.97026 1.85203293,14.44105 0.696932935,16.66645 C-0.458167065,18.89205 -0.195957065,21.76295 1.62229293,24.64405 C3.36079293,27.39575 4.98299293,29.90245 6.18549293,31.69625 C6.78668293,32.59316 7.28999293,33.29945 7.65339293,33.80235 C7.81357293,34.02357 7.92538293,34.20657 8.03629293,34.34432 C6.68949293,35.54662 5.34499293,36.75152 4.04749293,38.01402 L3.60075293,38.46047 L4.04749293,38.9069 L6.15359293,40.9811 L5.93017293,41.14098 L6.60033293,41.68294 C6.70560293,41.76334 6.81008293,41.87399 6.95135293,42.03386 L7.04685293,42.13441 L7.20642293,42.19471 C7.36771293,42.25501 7.52960293,42.3576 7.68505293,42.45011 C7.79183293,42.51041 7.82079293,42.53051 7.74835293,42.48031 L8.80135293,43.53331 C8.80635293,43.54131 8.79635293,43.55341 8.80135293,43.56351 L4.07855293,43.97878 L4.04635293,43.97878 C3.91905293,43.98888 3.86697293,44.03908 3.85490293,44.03908 C3.85290293,44.04008 3.82270293,44.03918 3.82270293,44.03908 L3.82270293,44.06928 C2.59630293,44.30456 1.76470293,45.45428 1.97190293,46.68598 C2.18849293,47.93478 3.35910293,48.81658 4.62050293,48.60058 L9.05610293,47.83438 L6.63090293,51.75938 L6.27988293,52.33353 L6.88619293,52.6211 C7.93539293,53.15904 9.31529293,53.7728 10.7473929,54.3762 C10.6173829,54.54211 10.4796229,54.60947 10.3325229,54.82264 C9.92942293,55.40684 9.45693293,56.16824 8.96032293,57.08834 C7.96719293,58.92854 6.82222293,61.37864 5.67352293,64.14054 L5.19489293,65.22544 C3.86189293,68.43324 4.01849293,71.37624 5.51404293,73.42654 C7.00954293,75.47674 9.77734293,76.56194 13.2363429,76.26644 L20.6395429,75.62795 C23.9491429,75.34741 26.9636429,75.04375 29.1596429,74.83058 C30.2576429,74.724 31.1506429,74.64758 31.7762429,74.57518 C32.0890629,74.53498 32.3319829,74.50478 32.5101629,74.47463 C32.5996629,74.46453 32.6665129,74.45453 32.7335829,74.44443 C32.7667829,74.43743 32.7787829,74.42433 32.8290829,74.41423 C32.8541829,74.40623 32.9014829,74.41123 32.9567829,74.38403 C32.9849829,74.37403 33.0019829,74.33373 33.0522829,74.28348 C33.0773829,74.26338 33.1477829,74.19298 33.1477829,74.18293 C33.1480929,74.18263 33.2432829,74.02406 33.2432829,74.02306 C33.2231829,74.07336 33.3297829,73.83905 33.4667029,73.51227 C33.6033529,73.18648 33.8062629,72.70082 34.0410429,72.14007 C34.5108129,71.01777 35.1403429,69.51897 35.8280429,67.86407 C36.4346729,66.40987 36.1126129,64.80057 35.1578829,63.42847 C34.7848429,62.89254 34.2377529,62.41347 33.6899829,61.92867 C43.0740829,64.50707 52.8799829,66.68577 60.5909829,67.51307 C61.8985829,68.84347 63.3857829,70.58067 65.2498829,72.90597 C68.4667829,76.89157 70.0603829,78.73947 72.2063829,79.38377 C74.3523829,80.02829 76.6676829,79.38877 81.3327829,78.74527 C90.6867829,77.44237 102.227783,76.14107 106.892783,75.52227 C109.139283,75.22464 111.172483,75.41166 113.179183,74.40547 C115.185783,73.39967 116.948783,71.24927 118.731583,66.61927 C121.186183,60.22747 125.159883,58.35697 129.325583,55.92927 C129.687653,55.7161 130.041993,55.49891 130.410583,55.25961 C130.695043,55.07358 131.000403,54.8946 131.304063,54.68546 C131.304063,54.68546 132.418063,53.90017 134.112163,52.54746 C137.112863,50.12456 141.868263,45.80006 145.185163,40.45346 L145.217363,40.45346 L145.409003,40.16589 C145.408523,40.1664 145.409153,40.13569 145.409003,40.13569 C145.403003,40.14579 145.707433,39.76768 146.079073,39.2418 C146.259363,38.97634 146.561813,38.62442 146.844963,38.1249 C147.109103,37.69053 147.402113,37.19181 147.706583,36.5932 L147.738783,36.563 C147.973563,36.04417 148.348713,35.4471 148.632263,34.6803 C148.890893,34.00763 149.155033,33.2639 149.334313,32.4466 L149.366513,32.4466 C149.371513,32.4265 149.362513,32.4064 149.366513,32.3863 C149.604913,31.56883 149.717023,30.6959 149.813253,29.8654 C149.856453,29.40387 149.887653,28.96849 149.908753,28.557 L149.908753,28.5268 C149.908753,28.0713 149.886653,27.64396 149.876553,27.2184 L149.844353,26.5799 L149.748853,26.5799 C149.704653,26.33054 149.648303,26.04297 149.621263,25.84589 C149.541863,25.38838 149.438363,24.93189 149.302113,24.50569 C149.299113,24.49559 149.305113,24.48559 149.302113,24.47549 C149.074673,23.56853 148.676593,22.79079 148.376753,22.08219 L148.376753,22.05199 L148.344553,22.05199 C147.976043,21.3763 147.609443,20.67339 147.131953,20.04169 L147.164153,20.01149 C146.741953,19.34786 146.268263,18.82659 145.855853,18.35209 C145.844753,18.34199 145.834753,18.33199 145.823653,18.32189 C145.400943,17.77692 144.942333,17.37472 144.611053,17.04549 C144.216693,16.63726 143.853203,16.34768 143.589953,16.12044 L143.557753,16.12044 C143.383503,15.98067 143.273803,15.8761 143.142883,15.76952 L143.110683,15.73932 C143.057383,15.69912 142.998553,15.61664 142.951103,15.57944 C142.936003,15.56934 142.901803,15.55934 142.887803,15.54924 C139.535103,12.17274 134.633803,8.87564 127.698803,5.78464 L127.666603,5.78464 C126.114503,5.22558 122.866603,3.73674 117.997703,2.43414 C113.128703,1.13154 106.595703,-0.02266 98.3407029,0.00884 L98.0854129,0.00884 L98.0873229,7.10542736e-15 L98.0873229,7.10542736e-15 Z M104.948123,8.552 C115.266123,8.5621 125.443123,9.7907 135.359123,13.7534 C138.169723,14.8731 141.449623,16.9426 142.628423,17.9387 C143.807323,18.93515 145.763623,21.4836 146.176723,22.9436 C144.011423,22.20858 141.865323,21.3578 139.571223,20.8055 C124.358223,17.1419 108.917223,18.0571 93.7482229,19.5611 C77.6072229,21.1588 61.6752229,24.4285 45.9142229,28.3684 C33.6172229,31.4417 21.2902229,34.3807 9.44022293,39.1864 C9.08338293,39.3322 8.72591293,39.47196 8.38722293,39.63285 C8.10759293,39.45989 7.79016293,39.33421 7.46186293,39.21857 C7.44176293,39.19847 7.41866293,39.17837 7.39856293,39.15827 C7.38846293,39.14817 7.37746293,39.13817 7.36636293,39.12807 C7.58477293,38.89278 7.76847293,38.62432 8.03654293,38.42624 C8.04354293,38.42124 8.06164293,38.43124 8.06874293,38.42624 C8.55118293,38.0914 8.99390293,37.74249 9.47284293,37.40514 C10.0247629,37.23823 10.4670829,36.91144 10.7492429,36.4479 C11.3454929,36.23473 11.8206429,35.87376 12.2490429,35.49067 C12.2812429,35.48267 12.3124429,35.47057 12.3445429,35.46047 C13.0959529,35.25534 13.8079429,34.98084 14.5144429,34.53541 C31.7674429,24.14441 50.6914429,18.02941 70.1664429,13.21941 C77.0222429,11.53081 83.8104429,9.68201 90.7804429,9.16681 C95.5169429,8.81589 100.259343,8.55546 104.948443,8.56049 L104.948123,8.552 L104.948123,8.552 Z M147.421123,29.517 C147.312723,31.074 146.893733,32.9215 146.559513,33.9842 C145.821363,36.3316 144.671613,38.0326 143.687713,39.058 C136.515713,46.533 127.130713,50.743 117.329713,53.641 C109.970113,55.8352 102.509713,57.8025 94.9607129,58.7467 C87.2773129,59.71701 79.3497129,59.63959 71.5387129,59.44854 C53.2007129,58.99908 35.0517129,56.99624 17.3227129,52.07724 C15.0798129,51.45685 12.9263129,50.62344 10.8130129,49.68394 C11.0446829,49.29682 11.3237029,48.93685 11.4512029,48.50324 C11.4673029,48.44294 11.5005029,48.39968 11.5145029,48.34337 C11.5417029,48.29307 11.5849029,48.26297 11.6100029,48.21567 C16.4170029,48.78076 21.2304029,49.46707 26.0970029,49.68357 C33.1787029,50.00433 40.2330029,49.59307 47.2220029,49.81127 C61.2790029,50.23157 75.2630029,49.33466 89.1840029,48.12007 C102.677003,46.94047 115.926003,44.00347 128.817003,39.91907 C135.542003,37.78137 142.487003,35.35537 147.421003,29.51607 L147.421123,29.517 L147.421123,29.517 Z M9.63112293,49.302 C9.56372293,49.3925 9.54772293,49.53529 9.47155293,49.62076 L9.34395293,49.74845 L9.63112293,49.302 L9.63112293,49.302 Z M108.649123,66.789 C109.828223,66.789 110.755223,67.72612 110.755223,68.927 C110.755223,70.1294 109.828553,71.065 108.649123,71.065 C107.452923,71.065 106.511123,70.12486 106.511123,68.927 C106.511123,67.7311 107.453273,66.789 108.649123,66.789 L108.649123,66.789 L108.649123,66.789 Z M92.2151229,68.1611 C93.4147229,68.1611 94.3531229,69.09922 94.3531229,70.2991 C94.3531229,71.482 93.4110629,72.4371 92.2151229,72.4371 C91.0391229,72.4371 90.1090229,71.48589 90.1090229,70.2991 C90.1090229,69.0952 91.0352929,68.1611 92.2151229,68.1611 L92.2151229,68.1611 L92.2151229,68.1611 Z M75.8131229,69.5652 C76.9930229,69.5652 77.9511229,70.51338 77.9511229,71.7032 C77.9511229,72.885 77.0001229,73.8092 75.8131229,73.8092 C74.6124229,73.8092 73.6751229,72.88815 73.6751229,71.7032 C73.6751229,70.5107 74.6193929,69.5652 75.8131229,69.5652 L75.8131229,69.5652 L75.8131229,69.5652 Z" id="Shape" stroke="none" fill="#EC1943" fill-rule="evenodd"></path>
+</svg>
+  </div>
+</div>
+    </body>
+</html>
